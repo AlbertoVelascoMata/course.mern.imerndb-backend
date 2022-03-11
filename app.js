@@ -13,6 +13,13 @@ var app = express();
 
 require('dotenv').config()
 
+var bodyParser  = require("body-parser");
+var cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
+// Database setup
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() =>  console.log('mymerndb connection successful'))
