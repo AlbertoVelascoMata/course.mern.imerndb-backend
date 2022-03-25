@@ -25,7 +25,7 @@ router.post('/', function (req, res) {
 
 /* DELETE an existing post */
 router.delete('/:id', function (req, res) {
-    Post.findByIdAndDelete(req.params.id, function (err, postinfo) {
+    Bookmark.findByIdAndDelete(req.params.id, function (err, postinfo) {
       if (err) res.status(500).send(err);
       else res.sendStatus(200);
     });
