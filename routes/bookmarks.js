@@ -18,7 +18,7 @@ router.get('/:email', function (req, res) {
 router.post('/', function (req, res) {
     Bookmark.create(req.body, function (err, bookmarkinfo) {
         if (err) res.status(500).send(err);
-        else res.sendStatus(200);
+        else res.status(200).json(bookmarkinfo);
     });
 });
 

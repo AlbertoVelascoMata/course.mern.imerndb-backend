@@ -1,2 +1,3 @@
-# course.mern.mernflix-backend
-Backend of the MERNflix project
+# IMernDB backend
+
+Backend of the IMernDB project.
